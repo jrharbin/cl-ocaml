@@ -8,6 +8,7 @@ Start with (repl). For now it just spits out the raw parse tree
 corresponding to the input strings:
 
 CL-USER> (repl)
+
 MLLisp REPL>let square = fun x -> x * x
 
 ((LET "square"
