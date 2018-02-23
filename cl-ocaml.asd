@@ -11,5 +11,6 @@
 	       (:file "macros")
 	       (:file "lexing")
 	       (:file "parsing" :depends-on ("lexing"))
+	       (:file "repl" :depends-on ("parsing"))
                (:file "main")))
 
