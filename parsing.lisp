@@ -36,3 +36,9 @@
    (LET Identifier Equals expr)
    (FUN Identifier MinusGreater expr)
    (expr BinOp expr)))
+
+(defun test-parse (str)
+  "Tests parsing the given string"
+  (debug-print-lexing str)
+  (yacc:parse-with-lexer (ocaml-lexer str)
+			 *ocaml-parser*))
