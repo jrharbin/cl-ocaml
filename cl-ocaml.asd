@@ -1,6 +1,6 @@
 ;;;; cl-ocaml.asd
 
-(asdf:defsystem #:mllisp
+(asdf:defsystem #:cl-ocaml
   :description "Toy implementation of OCaml in Common Lisp"
   :author "James Harbin <james.harbin@gmail.com>"
   :license "GPL2"
