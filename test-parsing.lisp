@@ -10,6 +10,8 @@
 
 (defun test-parsing-expressions ()
   (mapcar (lambda (str)
-	    (print (test-parse str)))
+	    (format t "Expression = ~A: " str)
+	    (print (test-parse str))
+	    (terpri))
 	  *parsing-test-expressions*))
   

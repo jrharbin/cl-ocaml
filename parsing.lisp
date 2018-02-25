@@ -1,6 +1,8 @@
 (eval-when (:compile-toplevel :load-toplevel :execute)
   ;; Expression term builders - expressions are a tuple of
   ;; expression_tag, value, type_placeholder, sub structure
+
+  ;; Fix: use a structure for these
   (defun mk-int (i) (list 'E_Int i nil))
   (defun mk-float (f) (list 'E_Float f nil))
   (defun mk-ident (id) (list 'E_Ident id nil))
