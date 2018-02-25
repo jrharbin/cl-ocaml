@@ -7,3 +7,9 @@
     "fun x -> 1 + x"
     "let y = 3"
     "let square = fun x -> x * x"))
+
+(defun test-parsing-expressions ()
+  (mapcar (lambda (str)
+	    (print (test-parse str)))
+	  *parsing-test-expressions*))
+  

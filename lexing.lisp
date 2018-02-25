@@ -94,6 +94,7 @@
   ("\\*" (return (values 'BinOp 'IntMul)))  
   ("\\-\\>" (return (values 'MinusGreater 'MinusGreater)))
   ("\\-" (return (values 'BinOp 'Minus)))
+  (";;" (return (values 'SemiSemi 'SemiSemi)))
   ("[:alpha:][:alnum:]*" (return (lex-alpha-string lexer:%0)))
   ("[:space:]+")
   ("#\Newline"))
@@ -106,4 +107,3 @@
   (ocaml-lexer "let x = 1 in x - 1"))
 
 (setup-keywords)
-
