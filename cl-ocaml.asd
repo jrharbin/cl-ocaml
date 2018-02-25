@@ -7,10 +7,12 @@
   :depends-on (#:yacc
                #:lexer)
   :serial t
-  :components ((:file "package")
+  :components ((:file "customtypespec")
+	       (:file "package")
 	       (:file "macros")
 	       (:file "lexing")
-	       (:file "parsing" :depends-on ("lexing"))
+	       (:file "parse-helpers" :depends-on ("customtypespec"))
+	       (:file "parsing" :depends-on ("lexing" "parse-helpers"))
 	       (:file "repl" :depends-on ("parsing"))
 	       (:file "test-parsing" :depends-on ("parsing"))
                (:file "main")))

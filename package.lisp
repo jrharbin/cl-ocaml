@@ -1,5 +1,5 @@
 ;;;; package.lisp
 
-(defpackage #:mllisp
+(defpackage #:cl-ocaml
   (:use #:cl))
 
