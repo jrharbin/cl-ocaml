@@ -11,8 +11,13 @@
   (sub-exprs () :type list))
 
 (defun mk-expr (&key tag val sub-exprs)
+  "Expression maker which verifies the type"
   (check-type sub-exprs expr-list)
   (make-expr :tag tag :val val :sub-exprs sub-exprs))
+
+(defun mk-parens (lp e rp)
+  (declare (ignore lp rp))
+  e)
 
 (defun mk-int (i)
   (mk-expr :tag :E_Int :val i))

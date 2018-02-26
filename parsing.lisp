@@ -30,11 +30,11 @@
       (Int #'mk-int)
       (Float #'mk-float)
       (Identifier #'mk-ident)
-      (LParen expr RParen) #'second)
+      (LParen expr RParen #'mk-parens))
      
      (simple_expr_list
-      (simple_expr simple_expr_list #'cons)
-      (simple_expr #'list))))
+      (simple_expr simple_expr_list #'list)
+      (simple_expr #'identity))))
 
 (define-parser-start-symbol *ocaml-parser* expr)
 (define-parser-start-symbol *impl-parser* implementation)
